@@ -1,0 +1,31 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "shop buy sell",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joe-fuentes/bamazon.git"
+  },
+  "keywords": [
+    "shop",
+    "buy",
+    "sell"
+  ],
+  "author": "Joe Fuentes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joe-fuentes/bamazon/issues"
+  },
+  "homepage": "https://github.com/joe-fuentes/bamazon#readme",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "colors": "^1.1.2",
+    "inquirer": "^3.2.2",
+    "mysql": "^2.14.1",
+    "prompt": "^1.0.0"
+  }
+}
