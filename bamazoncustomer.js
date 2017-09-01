@@ -108,3 +108,5 @@ var purchase = function(){
 		})
 	})
 };
+
+//NOTE: As of 08/31/2017 - This code hangs up after taking information from the user. It would not display the database results after the customer has bought some items - for now. To be continued...
