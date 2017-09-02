@@ -50,7 +50,6 @@ function promptUserPurchase() {
 			filter: Number
 		}
 	]).then(function(input) {
-		// console.log('Customer has selected: \n    item_id = '  + input.item_id + '\n    quantity = ' + input.quantity);
 
 		var item = input.item_id;
 		var quantity = input.quantity;
@@ -61,9 +60,6 @@ function promptUserPurchase() {
 		connection.query(queryStr, {item_id: item}, function(err, result) {
 			if (err) throw err;
 
-			// If the user has selected an invalid item ID, result attay will be empty
-			// console.log('result = ' + JSON.stringify(result));
-
 			if (result.length === 0) {
 				console.log('ERROR: Invalid Item ID. Please select a valid Item ID.');
 				displayInventory();
@@ -71,16 +67,12 @@ function promptUserPurchase() {
 			} else {
 				var productresult = result[0];
 
-				// console.log('productresult = ' + JSON.stringify(productresult));
-				// console.log('productresult.stock_quantity = ' + productresult.stock_quantity);
-
 				// If the quantity requested by the user is in stock
 				if (quantity <= productresult.stock_quantity) {
 					console.log('Congratulations, the product you requested is in stock! Placing order!');
 
 					// Construct the updating query string
 					var updateQueryStr = 'UPDATE products SET stock_quantity = ' + (productresult.stock_quantity - quantity) + ' WHERE item_id = ' + item;
-					// console.log('updateQueryStr = ' + updateQueryStr);
 
 					// Update the inventory
 					connection.query(updateQueryStr, function(err, result) {
@@ -107,7 +99,6 @@ function promptUserPurchase() {
 
 // displayInventory will retrieve the current inventory from the resultbase and output it to the console
 function displayInventory() {
-	// console.log('___ENTER displayInventory___');
 
 	// Construct the db query string
 	queryStr = 'SELECT * FROM products';
@@ -143,13 +134,5 @@ function displayInventory() {
 	})
 }
 
-// runBamazon will execute the main application logic
-function runBamazon() {
-	// console.log('___ENTER runBamazon___');
-
-	// Display the available inventory
-	displayInventory();
-}
-
-// Run the application logic
-runBamazon();
+// Display the available inventory
+displayInventory();
