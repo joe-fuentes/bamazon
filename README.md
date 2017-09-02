@@ -36,7 +36,11 @@ Then, after a purchase is made, I created the bamazonInventory.js to display the
 
 4. This database was populated with 10 different products.
 
-5. A Node application was created called `bamazonCustomer.js`. Running this application will first display all of the items available for sale. Include the ids, names, and prices of products for sale.
+5. A Node application was created called `bamazonCustomer.js`. Running this application, by typing...
+
+$ node bamazonCustomer.js
+
+...on GitBash's command prompt will first display a table that will show all of the items available for sale. Including the ids, names, and prices of products for sale.
 
 6. The app then prompts users with two messages.
 
