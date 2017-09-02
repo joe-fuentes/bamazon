@@ -8,11 +8,11 @@ An Amazon-like storefront with MySQL. This app will take in orders from customer
 
 Included in the images folder are a couple of screenshots to demonstrate that this application works as prescribed herein. This first screenshot shows the inventory table before a purchase has been made:
 
-C:\Users\Joe's servant\Bamazon\images\inventory(1) before purchase
+...\Bamazon\images\inventory(1) before purchase
 
 Then, after a purchase is made, I created the bamazonInventory.js to display the inventory table only, without having to do anything:
 
-C:\Users\Joe's servant\Bamazon\images\inventory(2) after purchase
+...\Bamazon\images\inventory(2) after purchase
 
 ## Instructions
 
