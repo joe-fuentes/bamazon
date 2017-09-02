@@ -78,7 +78,7 @@ INSERT INTO Products (item_id, product_name, department_name, price, stock_quant
 'Baby',
 4.77,
 50);
-
+/*
 USE bamazon;
 CREATE TABLE Departments(
 DepartmentId int AUTO_INCREMENT,
@@ -122,3 +122,4 @@ INSERT INTO Departments (department_name, OverHeadCosts, TotalSales) VALUES (
 -- This creates the alias table TotalProfits that will exist only when requested by the executive 
 SHOW TABLES;
 CREATE VIEW bamazon.TotalProfits AS SELECT DepartmentId, department_name, OverHeadCosts, TotalSales, TotalSales-OverHeadCosts AS TotalProfit FROM Departments;
+*/
